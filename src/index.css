@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-color: #eceef5 !important;
+}
+
+a, a:focus, a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+  color: #1976D2;
+}
