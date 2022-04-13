@@ -1,5 +1,6 @@
 import { CoinChartData } from '../../interfaces/CoinChartData';
 
+//The date and time of the visualization
 export const formatDateTime = (integerDate: number) => {
   const [date, time] = new Date(integerDate).toISOString().split('T');
   const splitDate = date.split('-');

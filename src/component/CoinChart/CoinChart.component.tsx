@@ -30,14 +30,15 @@ function CoinChart({ coinId, days }: CoinChartProps) {
     return (<LoadingIndicator />);
   }
 
+// Line Chart is visualized based on the data
   return (
     <ChartContainer>
       <ResponsiveContainer>
-        <LineChart width={800} height={300} data={formattedChartData}>
-          <Line type="monotone" dataKey="price" dot={false} stroke="#8884d8" />
+        <LineChart width={800} height={300} data={formattedChartData} margin={{top: 10, right: 30, left: 30, bottom: 10}}>
+          <Line type="monotone" dataKey="price" dot={false} stroke="#d884d8" />
           <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
-          <XAxis fontSize="12" dataKey="date" />
-          <YAxis />
+          <XAxis fontSize="14" dataKey="date" />
+          <YAxis fontSize="14" />
           <Tooltip />
           <Legend />
         </LineChart>

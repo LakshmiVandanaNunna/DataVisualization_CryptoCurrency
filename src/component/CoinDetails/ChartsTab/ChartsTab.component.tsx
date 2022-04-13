@@ -21,11 +21,14 @@ function ChartsTab() {
           onChange={(_event, value) => setChartPeriodDays(value)}
           aria-label="Vertical tabs example"
         >
-          <Tab label="1 Day" value={1} />
-          <Tab label="1 Month" value={30} />
-          <Tab label="6 Months" value={180} />
-          <Tab label="1 Year" value={365} />
-          <Tab label="Complete" value="max" />
+          <Tab label=" 1D " value={1} />
+          <Tab label=" 5D " value={5} />
+          <Tab label=" 1M " value={30} />
+          <Tab label=" 3M " value={90} />
+          <Tab label=" 6M " value={180} />
+          <Tab label=" 1Y " value={365} />
+          <Tab label=" 5Y " value={1862} />
+          <Tab label=" MAX  " value="max" />
         </Tabs>
 
         <CoinChart days={chartPeriodDays} coinId={coin.id} />
