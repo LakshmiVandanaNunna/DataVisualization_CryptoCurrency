@@ -5,6 +5,7 @@ import { CoinDetailsContext } from '../CoinDetails.context';
 import TabContent from '../TabContent';
 import { ChartTabContainer } from './ChartTab.styles';
 
+
 function ChartsTab() {
   const coin = useContext(CoinDetailsContext);
   const [chartPeriodDays, setChartPeriodDays] = useState<number | 'max'>(1);

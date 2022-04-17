@@ -38,11 +38,11 @@ function CoinChart({ coinId, days }: CoinChartProps) {
           <Line type="monotone" dataKey="price" dot={false} stroke="#d884d8" />
           <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
           <XAxis fontSize="14" dataKey="date" />
-          <YAxis fontSize="14" />
+          <YAxis fontSize="14" dataKey="price" />
           <Tooltip />
           <Legend />
         </LineChart>
-      </ResponsiveContainer>
+        </ResponsiveContainer>
     </ChartContainer>
   );
 }

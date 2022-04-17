@@ -29,6 +29,7 @@ function CoinDetails({ coin }: CoinDetailsProps) {
         <DataRow title="Current Price" text={`$${coin.market_data.current_price[Currency.usd]}`} />
         <DataRow title="High 24h" text={`$${coin.market_data.high_24h[Currency.usd]}`} />
         <DataRow title="Low 24h" text={`$${coin.market_data.low_24h[Currency.usd]}`} />
+        <DataRow title="Value change 24h" text={`$${(coin.market_data.high_24h[Currency.usd])-(coin.market_data.low_24h[Currency.usd])}`}  />
 
         <CoinDetailsProvider value={coin}>
           <ChartsTab />
