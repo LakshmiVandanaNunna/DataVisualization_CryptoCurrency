@@ -2,7 +2,7 @@
 
 Video Link 
 
-1. **Introduction ,Coin chart, Coin list **
+1. **Introduction ,Coin chart, Coin list**
 
 Name : Sreeja Bellamkonda
 ID: 
@@ -14,7 +14,7 @@ Name: Lakshmi Vandana Nunna
 ID: 
 Link: https://vimeo.com/700301905
 
-3.** Datarow,Loading indicator, Pages ,Enums **
+3.**Datarow,Loading indicator, Pages ,Enums**
 
 Name : Chaitanya Galla
 ID: 11554881
