@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import * as d3 from "d3";
-import {getCoinList} from "../utils/api";
+import * as d3 from 'd3';
+import {getCoinList} from '../utils/api';
 import './ChartStyles.css';
 
 
@@ -11,7 +11,7 @@ class Charts extends Component {
       const coinPage = await getCoinList(1);
       data = coinPage.map((coin: any) => Math.ceil(coin.current_price));
       this.drawBarChart(data);
-      // this.drawTwoChart(data);
+      this.drawBarChart(data);
       // this.drawThreeChart(data);
       // this.drawFourChart(data);
       // this.drawFiveChart(data);
