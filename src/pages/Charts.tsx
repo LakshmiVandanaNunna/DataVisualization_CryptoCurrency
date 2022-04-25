@@ -11,7 +11,7 @@ class Charts extends Component {
       const coinPage = await getCoinList(1);
       data = coinPage.map((coin: any) => Math.ceil(coin.current_price));
       this.drawBarChart(data);
-      this.drawBarChart(data);
+      this.drawPieChart(data);
       // this.drawThreeChart(data);
       // this.drawFourChart(data);
       // this.drawFiveChart(data);
@@ -44,9 +44,9 @@ class Charts extends Component {
       .append("rect")
       .attr("x", (d, i) => i * 70)
       .attr("y", (d, i) => h - 10 * d)
-      .attr("width", 65)
+      .attr("width", 5)
       .attr("height", (d, i) => d * 10)
-      .attr("fill", "green");
+      .attr("fill", "blue");
 
     svg.selectAll("text")
   .data(data)
@@ -55,20 +55,70 @@ class Charts extends Component {
   .text((d) => d)
   .attr("x", (d, i) => i * 70)
   .attr("y", (d, i) => h - (10 * d) - 3);
-
-
   }
-        
-  render() {
+
+  drawPieChart(data1) {
+    // Remove the old svg
+    d3.select('#pie-container')
+      .select('svg')
+      .remove();
+
+    // Create new svg
+    const svg = d3
+      .select('#pie-container')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+      .append('g')
+      .attr('transform', `translate(${width / 2}, ${height / 2})`);
+
+    const arcGenerator = d3
+      .arc()
+      .innerRadius(innerRadius)
+      .outerRadius(outerRadius);
+
+    const pieGenerator = d3
+      .pie()
+      .padAngle(0)
+      .value((d) => d.value);
+
+    const arc = svg
+      .selectAll()
+      .data(pieGenerator(data))
+      .enter();
+
+    // Append arcs
+    arc
+      .append('path')
+      .attr('d', arcGenerator)
+      .style('fill', (_, i) => colorScale(i))
+      .style('stroke', '#ffffff')
+      .style('stroke-width', 0);
+
+    // Append text labels
+    arc
+      .append('text')
+      .attr('text-anchor', 'middle')
+      .attr('alignment-baseline', 'middle')
+      .text((d) => d.data1.label)
+      .style('fill', (_, i) => colorScale(data1.length - i))
+      .attr('transform', (d) => {
+        const [x, y] = arcGenerator.centroid(data1);
+        return `translate(${x}, ${y})`;
+      });
+  };
+
+}
+
+  render(){
     return <div className="chart-container">
       <div className="container-item" id="bar-chart"></div>
-      <div className="container-item" id="two-chart"></div>
+      <div className="container-item" id="pie-container"></div>
       <div className="container-item" id="three-chart"></div>
       <div className="container-item" id="four-chart"></div>
       <div className="container-item" id="five-chart"></div>
     </div>
-
   }
-}
-    
+
 export default Charts;
+
