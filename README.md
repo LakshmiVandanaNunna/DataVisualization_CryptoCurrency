@@ -1,5 +1,5 @@
 # DataVisualization_CryptoCurrency
-
+#Increment-1 
 Video Link 
 
 1. **Introduction ,Coin chart, Coin list**
@@ -29,3 +29,21 @@ Link: https://vimeo.com/700299330
 
 
 **REPORT : https://docs.google.com/document/d/1M2nQ0GHHzZFyvx3QtnFDnCjz6_0zOWpB/edit?usp=sharing&ouid=112291544490969925560&rtpof=true&sd=true **
+
+**#Increment-2 (Final Project)**
+
+Name : Sreeja Bellamkonda
+ID: 11547142
+Link:
+
+Name: Lakshmi Vandana Nunna
+ID: 11445756
+Link:
+
+Name : Chaitanya Galla
+ID: 11554881
+Link:
+
+Name: Nitin Dunday Mohan
+ID: 11515126
+Link:
