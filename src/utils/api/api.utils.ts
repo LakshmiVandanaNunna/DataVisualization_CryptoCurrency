@@ -8,7 +8,9 @@ export async function getCoinList(page = 1): Promise<CoinSummary[]> {
   const params = `page=${page}&per_page=${COIN_PAGE_SIZE}&vs_currency=usd`;
 
   const result = await axios.get(`${BASE_API_URL}/coins/markets?${params}`);
-  return result.data.splice(0, 8);
+  // return result.data.splice(0, 8);
+
+  return result.data.filter(item => item.current_price < 2);
 }
 
 export async function getCoinDetails(coindId: string): Promise<Coin> {

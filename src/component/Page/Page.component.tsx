@@ -13,7 +13,7 @@ function Page({ children }: PageProps) {
       <CssBaseline />
       <PageHeader>
         <HomeLink to="/">
-          Crypto currency Dashboard
+          Crypto Currency Dashboard
         </HomeLink>
       </PageHeader>
       <PageContent>

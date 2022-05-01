@@ -28,6 +28,7 @@ function TabsPage() {
     fetchCoinPage();
   }, []);
 
+  // @ts-ignore
   const tabs = <>
     <div className="tab-container">
     <Tabs>
@@ -41,7 +42,7 @@ function TabsPage() {
       {isLoading && <LoadingIndicator/>}
     </TabPanel>
     <TabPanel>
-      <Charts />
+      <Charts coins={coins}/>
     </TabPanel>
   </Tabs>
     </div></>;

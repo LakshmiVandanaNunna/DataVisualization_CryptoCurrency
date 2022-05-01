@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+text {
+    font-size: 24px;
+    font-family: 'Share Tech', sans-serif;
+}
+
+.axis-label, .legend-label {
+    fill: #635F5D;
+    font-size: 15pt;
+    font-family: sans-serif;
+}
+
+
+.title {
+    text-align: center;
+}
